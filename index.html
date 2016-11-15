@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Homework 5 app</title>
+
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+
+  <body>
+  
+    <header>
+      <div class="Header-Display">
+        <h1 class="ui center aligned header">Trivia Time!</h1>
+      </div>
+
+      <div class ="Round-Over">
+        <h1> Round Over!</h1>
+        <h1> Refresh to start a new round </h1>
+      </div>
+    </header>
+    
+    <main>
+      <div class="login">
+        <h2>Username</h2>
+        <input id="username" type="text">
+        <button id="submit">Submit</button>
+      </div>
+
+      <div class="container" >
+
+        <ul class="users" class="unstyled"></ul>
+        
+          <div class="ui hidden divider"></div>
+
+          <div class="Get-Question" >
+          <section class='get-question'>
+
+            <h2>Get Question</h2>
+            <p>Question:</p><input id="trivia-question"><button>Get Question</button>
+          </section>
+          </div>
+
+          <div class="ui hidden divider"></div>
+          
+          <div class="Answer-Question" >
+            <section class='post-answer'>
+              <h2>Post Answer</h2>
+              <input id="possible-answer" placeholder="Your Answer"><button>Post Answer</button><input id="result">   
+            </section>
+          </div>
+
+          <div class="ui hidden divider"></div>
+          
+          <div class="Update-Database" >
+            <section class='post-question'>
+              <h2>Post New Question</h2>
+              <input id = "new-question" placeholder="Who played Al Bundy?"><input id="new-answer" placeholder="Ed O'Neil"><button>Post New Question</button>
+            </section>
+          </div>
+      </div>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>

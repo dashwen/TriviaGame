@@ -1,0 +1,28 @@
+.container{
+  display: none;
+}
+
+.Round-Over{
+  display: none;
+}
+
+.login{
+	padding: 250px;
+	text-align: center;
+}
+
+.users {
+  float: right;
+  width: 570px;
+}
+
+.users p {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#trivia-question {
+	width: = 200px;
+	height: = 200px;
+}
