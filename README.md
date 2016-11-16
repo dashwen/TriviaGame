@@ -1,6 +1,6 @@
 # TriviaGame using Socket.io!!
 # Javier Torres and Deshawn Dana
-# Assignment 5: Trivia Game using MongoDB, Express, Node.js, and Socket.io
+# Assignment 5: Trivia Game using MongoDB, Redis, Express, Node.js, and Socket.io
 
 ##############################   Requirements to Run   ###########################
 
@@ -8,6 +8,7 @@ Node.js
 Mongodb
 Express
 Socket.io
+Redis
 
 ##############################   Instructions   ##################################
 
@@ -19,17 +20,20 @@ Socket.io
    npm install —-save express
    npm install —-save mongodb
    npm install —-save socket.io
+   npm install —-save redis 
 
 ##############################   To Run Trivia Game   #############################
 
-1. Open command console
-2. Run Mongodb and type command db.questions.drop() MANDATORY/BEFORE AFTER EVERY RUN!!!
-3. Run node server.js
-4. click on index.html and enjoy!
+1. Open 4 command console windows
+2. On Command console window1, type mongod and press enter
+3. On Command console window2, type redis-server and press enter
+4. On Command console window3, type mongo and press enter
+5. On window3 of command console, type db.questions.drop() MANDATORY/BEFORE AFTER EVERY RUN!!!
+6. On Command console window4, type server.js and press enter
+7. click on index.html and enjoy!
 
 ##############################   Notes/Comments  ##################################
 
-* Not using Redis for storing counter database
 * Text field box is small, scroll right to see entire question
 * Database name is my_dee_bee
 
