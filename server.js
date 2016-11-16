@@ -7,7 +7,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     mongodb = require('mongodb'),
     MongoClient = mongodb.MongoClient;
-    //redis = require('redis');
+    redis = require('redis');
 
 // body parser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -112,11 +112,10 @@ db.once('open', function() {
 
 
 // Redis
-/*
 redisClient = redis.createClient();
 redisClient.set('right', 0, function(){});
 redisClient.set('wrong', 0, function(){});
-*/
+
 
 //directory where files all lie in
 app.use('/', express.static(__dirname + '/'));
@@ -260,12 +259,12 @@ app.post('/postAnswer', function (req, res) {
             	{
         		if(Question.answer === answer) 
         		{
-            			//redisClient.incr('right');
+            			redisClient.incr('right');
             			res.json({"result": "CORRECT!"});
         		}
         		else
         		{
-            			//redisClient.incr('wrong');
+            			redisClient.incr('wrong');
             			res.json({"result": "WRONG"});
         		}
            	}
